@@ -2,10 +2,17 @@ import home from "./home";
 import menu from "./menu";
 import info from "./info";
 import { main } from "../index";
+import Logo from "../assets/logo.png";
 
 export default function navbar() {
     const header = document.createElement('header');
     header.id = 'navbar';
+
+    const logo = new Image();
+    logo.src = Logo;
+    logo.id = 'logo';
+    header.appendChild(logo);
+
 
     let item = ['Home', 'Galley Grub', 'Info'];
     item.forEach((element) => {
