@@ -15,3 +15,10 @@
     justify-content: center;
     gap: 10vw;
 }
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

@@ -1,33 +1,20 @@
+import home from "./home";
+import menu from "./menu";
+import info from "./info";
+
 export default function navbar() {
     const header = document.createElement('header');
     header.id = 'navbar';
 
-    let menu = ['Home', 'Galley Grub', 'Info'];
-    menu.forEach((element) => {
+    const main = document.createElement('main');
+    main.id = 'content';
+
+    let item = ['Home', 'Galley Grub', 'Info'];
+    item.forEach((element) => {
         const menuDiv = document.createElement('div');
         menuDiv.className = 'menu-item';
         menuDiv.innerHTML = element;
         header.appendChild(menuDiv);
-        // header.addEventListener('click', (e) => {
-        //     if (element.toLowerCase() === 'home') {
-        //         while (body.firstChild) {
-        //             body.removeChild(body.lastChild);
-        //         }
-        //         body.appendChild(content());
-        //     }
-        //     if (element.toLowerCase() === 'galley grub') {
-        //         while (body.firstChild) {
-        //             body.removeChild(body.lastChild);
-        //         }
-        //         body.appendChild(galley());
-        //     }
-        //     if (element.toLowerCase() === 'info') {
-        //         while (body.firstChild) {
-        //             body.removeChild(body.lastChild);
-        //         }
-        //         body.appendChild(info());
-        //     }
-        // });
     });
     
     return header;
